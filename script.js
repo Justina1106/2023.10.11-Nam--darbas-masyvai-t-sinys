@@ -357,23 +357,135 @@ let stringsWithTAndI = array.filter(function(element) {
 
 console.log("tekstus (string), kurie turi raides t ir i:", stringsWithTAndI);
 // 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
+let stringsWithTNotK = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('t') && !element.includes('k');
+});
+
+console.log("tekstus (string), kurie turi raide t, bet neturi raidės k:", stringsWithTNotK);
 // 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
+let stringsWithANotS = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('a') && !element.includes('s');
+});
+
+console.log("tekstus (string), kurie turi raide a, bet neturi raidės s:", stringsWithANotS);
 // 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
+let stringsWithMoreThanOneT = array.filter(function(element) {
+    if (typeof element !== 'string') {
+        return false;
+    }
+    let count = (element.match(/t/g) || []).length; // Count occurrences of 't'
+    return count > 1;
+});
+
+console.log("tekstus (string), kurie turi daugiau nei vieną raidę t:", stringsWithMoreThanOneT);
 // 3.63. Gauti tik tekstus (string), kurie turi raidžių junginį st.
+let stringsWithST = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('st');
+});
+
+console.log("tekstus (string), kurie turi raidžių junginį st:", stringsWithST);
 // 3.64. Gauti tik tekstus (string), kurie turi raidžių junginį nd.
+let stringsWithND = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('nd');
+});
+
+console.log("tekstus (string), kurie turi raidžių junginį nd:", stringsWithND);
 // 3.65. Gauti tik tekstus (string), kurie neturi raidės s.
+let stringsWithoutS = array.filter(function(element) {
+    return typeof element === 'string' && !element.includes('s');
+});
+
+console.log("tekstus (string), kurie neturi raidės s:", stringsWithoutS);
 // 3.66. Gauti tik tekstus (string), kurie neturi raidės t.
+let stringsWithoutT = array.filter(function(element) {
+    return typeof element === 'string' && !element.includes('t');
+});
+
+console.log("tekstus (string), kurie neturi raidės t:", stringsWithoutT);
 // 3.67. Gauti tik tekstus (string), kurie neturi raidės r ir l.
+let stringsWithoutRAndL = array.filter(function(element) {
+    return typeof element === 'string' && !element.includes('r') && !element.includes('l');
+});
+
+console.log("tekstus (string), kurie neturi raidės r ir l:", stringsWithoutRAndL);
 // 3.68. Gauti tik tekstus (string), kurie prasideda skaičiumi.
+let stringsStartingWithNumber = array.filter(function(element) {
+    return typeof element === 'string' && /^\d/.test(element);
+});
+
+console.log("tekstus (string), kurie prasideda skaičiumi:", stringsStartingWithNumber);
 // 3.69. Gauti tik tekstus (string), kurie prasideda raide s.
+let stringsStartingWithS = array.filter(function(element) {
+    return typeof element === 'string' && element[0] === 's';
+});
+
+console.log("tekstus (string), kurie prasideda raide s:", stringsStartingWithS);
 // 3.70. Gauti tik tekstus (string), kurie prasideda raide o.
+let stringsStartingWithO = array.filter(function(element) {
+    return typeof element === 'string' && element[0] === 'o';
+});
+
+console.log("tekstus (string), kurie prasideda raide o:", stringsStartingWithO);
 // 3.71. Gauti tik tekstus (string), kurie baigiasi raide d.
+let stringsEndingWithD = array.filter(function(element) {
+    return typeof element === 'string' && element[element.length - 1] === 'd';
+});
+
+console.log("tekstus (string), kurie baigiasi raide d:", stringsEndingWithD);
 // 3.72. Gauti tik tekstus (string), kurie baigiasi raide s.
+let stringsEndingWithS = array.filter(function(element) {
+    return typeof element === 'string' && element[element.length - 1] === 's';
+});
+
+console.log("tekstus (string), kurie baigiasi raide s:", stringsEndingWithS);
 // 3.73. Gauti tik tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o.
+let filteredStrings = array.filter(function(element) {
+    return typeof element === 'string' && element.length > 4 && element.includes('o');
+});
+
+console.log("tekstus (string), kurie turi daugiau nei 4 simbolius ir turi raidę o:", filteredStrings);
 // 3.74. Gauti tik tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a.
+let filteredStrings2 = array.filter(function(element) {
+    return typeof element === 'string' && element.length >= 5 && element.includes('a');
+});
+
+console.log("tekstus (string), kurie turi daugiau arba lygiai 5 simbolius ir turi raidę a:", filteredStrings2);
 // 3.75. Gauti tik tekstus (string), kurie turi porinį simbolių skaičių.
+let filteredStrings3 = array.filter(function(element) {
+    return typeof element === 'string' && element.length % 2 === 0;
+});
+
+console.log("tekstus (string), kurie turi porinį simbolių skaičių:", filteredStrings3);
 // 3.76. Gauti tik tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s.
+let filteredStrings4 = array.filter(function(element) {
+    return typeof element === 'string' && element.length % 2 !== 0 && element.includes('s');
+});
+
+console.log("tekstus (string), kurie turi neporinį simbolių skaičių ir turi raidę s:", filteredStrings4);
 // 3.77. Gauti tik tekstus (string), kurių trečias simbolis yra a.
+let filteredStrings5 = array.filter(function(element) {
+    return typeof element === 'string' && element.length >= 3 && element.charAt(2) === 'a';
+});
+
+console.log("tekstus (string), kurių trečias simbolis yra a:", filteredStrings5);
 // 3.78. Gauti tik tekstus (string), kurių ketvirtas simbolis yra l.
+let filteredStrings6 = array.filter(function(element) {
+    return typeof element === 'string' && element.length >= 4 && element.charAt(3) === 'l';
+});
+
+console.log("tekstus (string), kurių ketvirtas simbolis yra l:", filteredStrings6);
 // 3.79. Gauti tik tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4.
+let filteredStrings7 = array.filter(function(element) {
+    return typeof element === 'string' && element.length > 4 && element.charAt(4) !== 't';
+});
+
+console.log("tekstus (string), kurių penktas simbolis nėra t ir kurie turi daugiau simbolių nei 4:", filteredStrings7);
 // 3.80. Gauti tik tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi.
+let filteredStrings8 = array.filter(function(element) {
+    return typeof element === 'string' && 
+           element.length < 6 && 
+           !(/^\d/.test(element)) &&
+           element.charAt(0) !== 'e';
+});
+
+console.log("tekstus (string), kurių pirmas simbolis nėra e, kurie turi mažiau simbolių nei 6 ir kurie neprasideda skaičiumi:", filteredStrings8);
