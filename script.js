@@ -303,14 +303,59 @@ let filteredNumbers13 = array.filter(function(number) {
 
 console.log("skaičius, kurie yra mažesni arba lygūs 888, didesni arba lygūs -333, dalinasi iš 3 ir nėra nulis:", filteredNumbers13);
 // 3.51. Gauti tik skaičius.
+let allNumbers = array.filter(function(number) {
+    return !isNaN(number) && isFinite(number);
+});
+
+console.log("Gauti tik skaičius:", allNumbers);
 // 3.52. Gauti tik tekstus (string).
+let stringsOnly = array.filter(function(element) {
+    return typeof element === 'string';
+});
+
+console.log("Gauti tik tekstus (string):", stringsOnly);
 // 3.53. Gauti tik tekstus (string), kurie turi daugiau nei 5 simbolius.
+let longStrings = array.filter(function(element) {
+    return typeof element === 'string' && element.length > 5;
+});
+
+console.log("tik tekstus (string), kurie turi daugiau nei 5 simbolius:", longStrings);
 // 3.54. Gauti tik tekstus (string), kurie turi mažiau arba lygiai 5 simbolius.
+let longStrings2 = array.filter(function(element) {
+    return typeof element === 'string' && element.length <= 5;
+});
+
+console.log("tik tekstus (string), kurie turi mažiau arba lygiai 5 simbolius:", longStrings2);
 // 3.55. Gauti tik tekstus (string), kurie turi mažiau nei 7 simbolius.
+let longStrings3 = array.filter(function(element) {
+    return typeof element === 'string' && element.length < 7;
+});
+
+console.log("tekstus (string), kurie turi mažiau nei 7 simbolius:", longStrings3);
 // 3.56. Gauti tik tekstus (string), kurie turi raidę t.
+let stringsWithT = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('t');
+});
+
+console.log("tekstus (string), kurie turi raidę t:", stringsWithT);
 // 3.57. Gauti tik tekstus (string), kurie turi raidę y.
+let stringsWithY = array.filter(function(element) {
+    return typeof element === 'string' && element.includes('y');
+});
+
+console.log("tekstus (string), kurie turi raidę y:", stringsWithY);
 // 3.58. Gauti tik tekstus (string), kurie turi raides e arba a.
+let stringsWithEorA = array.filter(function(element) {
+    return typeof element === 'string' && (element.indexOf('e') !== -1 || element.indexOf('a') !== -1);
+});
+
+console.log("tekstus (string), kurie turi raides e arba a:", stringsWithEorA);
 // 3.59. Gauti tik tekstus (string), kurie turi raides t ir i.
+let stringsWithTAndI = array.filter(function(element) {
+    return typeof element === 'string' && (element.indexOf('t') !== -1 && element.indexOf('i') !== -1);
+});
+
+console.log("tekstus (string), kurie turi raides t ir i:", stringsWithTAndI);
 // 3.60. Gauti tik tekstus (string), kurie turi raide t, bet neturi raidės k.
 // 3.61. Gauti tik tekstus (string), kurie turi raide a, bet neturi raidės s.
 // 3.62. Gauti tik tekstus (string), kurie turi daugiau nei vieną raidę t.
