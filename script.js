@@ -129,20 +129,91 @@ let numbersDivisibleByNineOrTwelveOrThirteen = array.filter(function(number) {
 
 console.log("Numbers Divisible by 9, 12 or 13:", numbersDivisibleByNineOrTwelveOrThirteen);
 // 3.22. Gauti tik skaičius, kurie yra didesni už 100.
+let numbersGreaterThan100 = array.filter(function(number) {
+    return number > 100;
+});
+
+console.log("Numbers Greater than 100:", numbersGreaterThan100);
 // 3.23. Gauti tik skaičius, kurie yra didesni už 555.
+let numbersGreaterThan555 = array.filter(function(number) {
+    return number > 555;
+});
+
+console.log("Numbers Greater than 555:", numbersGreaterThan555);
 // 3.24. Gauti tik skaičius, kurie yra didesni arba lygūs 888.
+let numbersGreaterOrEqual888 = array.filter(function(number) {
+    return number >= 888;
+});
+
+console.log("Numbers Greater or equal than 888:", numbersGreaterOrEqual888);
 // 3.25. Gauti tik skaičius, kurie yra didesni arba lygūs 6789.
+let numbersGreaterOrEqual6789 = array.filter(function(number) {
+    return number >= 6789;
+});
+
+console.log("Numbers Greater or equal than 6789:", numbersGreaterOrEqual6789);
 // 3.26. Gauti tik skaičius, kurie yra mažesni už 50.
+let numbersLessThan50 = array.filter(function(number) {
+    return number < 50;
+});
+
+console.log("Numbers Less than 50:", numbersLessThan50);
 // 3.27. Gauti tik skaičius, kurie yra mažesni už 1000.
+let numbersLessThan1000 = array.filter(function(number) {
+    return number < 1000;
+});
+
+console.log("Numbers Less than 1000:", numbersLessThan1000);
 // 3.28. Gauti tik skaičius, kurie yra mažesni arba lygūs -1.
+let numbersLessOrEqualMinusOne = array.filter(function(number) {
+    return number <= -1;
+});
+
+console.log("Numbers Less or equal -1:", numbersLessOrEqualMinusOne);
 // 3.29. Gauti tik skaičius, kurie yra mažesni arba lygūs -5564.
+let numbersLessOrEqualMinus5564 = array.filter(function(number) {
+    return number <= -5564;
+});
+
+console.log("Numbers Less or equal -5564:", numbersLessOrEqualMinus5564);
 // 3.30. Gauti tik skaičius, kurie yra mažesni už 1000 ir didesni už 500.
+let filteredNumbers = array.filter(function(number) {
+    return number > 500 && number < 1000;
+});
+
+console.log("Numbers between 500 and 1000:", filteredNumbers);
 // 3.31. Gauti tik skaičius, kurie yra mažesni už 100 ir didesni už 0.
+let filteredNumbers2 = array.filter(function(number) {
+    return number > 0 && number < 100;
+});
+
+console.log("Numbers between 0 and 100:", filteredNumbers2);
 // 3.32. Gauti tik skaičius, kurie yra mažesni už 0 ir didesni už -50.
+let filteredNumbers3 = array.filter(function(number) {
+    return number < 0 && number > -50;
+});
+
+console.log("Numbers between -50 and 0:", filteredNumbers3);
 // 3.33. Gauti tik skaičius, kurie yra mažesni arba lygūs 0 ir didesni už -100.
+let filteredNumbers4 = array.filter(function(number) {
+    return number <= 0 && number > -100;
+});
+
+console.log("Numbers between -100 and 0:", filteredNumbers4);
 // 3.34. Gauti tik skaičius, kurie yra didesni arba lygūs 0 ir mažesni už 55.
+let filteredNumbers5 = array.filter(function(number) {
+    return number >= 0 && number < 55;
+});
+
+console.log("Numbers between 0 and 55:", filteredNumbers5);
 // 3.35. Gauti tik skaičius, kurie yra didesni arba lygūs 444 ir mažesni arba lygūs 654.
+let filteredNumbers6 = array.filter(function(number) {
+    return number >= 444 && number <= 654;
+});
+
+console.log("Numbers between 444 and 654:", filteredNumbers6);
 // 3.36. Gauti tik teigiamus skaičius, kurie dalinasi iš 2.
+
 // 3.37. Gauti tik teigiamus skaičius, kurie dalinasi iš 3.
 // 3.38. Gauti tik neigiamus skaičius, kurie dalinasi iš 4.
 // 3.39. Gauti tik neigiamus skaičius, kurie dalinasi iš 111.
