@@ -213,21 +213,95 @@ let filteredNumbers6 = array.filter(function(number) {
 
 console.log("Numbers between 444 and 654:", filteredNumbers6);
 // 3.36. Gauti tik teigiamus skaičius, kurie dalinasi iš 2.
+let positiveNumbersDivisibleByTwo = array.filter(function(number) {
+    return number > 0 && number % 2 === 0;
+});
 
+console.log("Positive Numbers Divisible by 2:", positiveNumbersDivisibleByTwo);
 // 3.37. Gauti tik teigiamus skaičius, kurie dalinasi iš 3.
+let positiveNumbersDivisibleByThree = array.filter(function(number) {
+    return number > 0 && number % 3 === 0;
+});
+
+console.log("Positive Numbers Divisible by 3:", positiveNumbersDivisibleByThree);
 // 3.38. Gauti tik neigiamus skaičius, kurie dalinasi iš 4.
+let negativeNumbersDivisibleByFour = array.filter(function(number) {
+    return number < 0 && number % 4 === 0;
+});
+
+console.log("Negative Numbers Divisible by 4:", negativeNumbersDivisibleByFour);
 // 3.39. Gauti tik neigiamus skaičius, kurie dalinasi iš 111.
+let negativeNumbersDivisibleBy111 = array.filter(function(number) {
+    return number < 0 && number % 111 === 0;
+});
+
+console.log("Negative Numbers Divisible by 111:", negativeNumbersDivisibleBy111);
 // 3.40. Gauti tik skaičius, kurie yra didesni už 500 ir kurie dalinasi iš 2.
+let numbersGreaterThan500AndDivisibleBy2 = array.filter(function(number) {
+    return number > 500 && number % 2 === 0;
+});
+
+console.log("Numbers Greater Than 500 and Divisible by 2:", numbersGreaterThan500AndDivisibleBy2);
 // 3.41. Gauti tik skaičius, kurie yra didesni už 1000 ir kurie dalinasi iš 3.
+let numbersGreaterThan1000AndDivisibleBy3 = array.filter(function(number) {
+    return number > 1000 && number % 3 === 0;
+});
+
+console.log("Numbers Greater Than 1000 and Divisible by 3:", numbersGreaterThan1000AndDivisibleBy3);
 // 3.42. Gauti tik skaičius, kurie yra mažesni už 1000 ir kurie dalinasi iš 9.
+let numbersLessThan1000AndDivisibleBy9 = array.filter(function(number) {
+    return number < 1000 && number % 9 === 0;
+});
+
+console.log("Numbers Less Than 1000 and Divisible by 9:", numbersLessThan1000AndDivisibleBy9);
 // 3.43. Gauti tik skaičius, kurie yra mažesni už 500 ir kurie dalinasi iš 2.
+let numbersLessThan500AndDivisibleBy2 = array.filter(function(number) {
+    return number < 500 && number % 2 === 0;
+});
+
+console.log("Numbers Less Than 500 and Divisible by 2:", numbersLessThan500AndDivisibleBy2);
 // 3.44. Gauti tik skaičius, kurie yra didesni arba lygūs 33 ir kurie dalinasi iš 3.
+let filteredNumbers7 = array.filter(function(number) {
+    return number >= 33 && number % 3 === 0;
+});
+
+console.log("Numbers Greater or Equal 33 and Divisible by 3:", filteredNumbers7);
 // 3.45. Gauti tik skaičius, kurie yra didesni arba lygūs 444 ir kurie dalinasi iš 12.
+let filteredNumbers8 = array.filter(function(number) {
+    return number >= 444 && number % 12 === 0;
+});
+
+console.log("Numbers Greater or Equal 444 and Divisible by 12:", filteredNumbers8);
 // 3.46. Gauti tik skaičius, kurie yra mažesni arba lygūs 155 ir kurie dalinasi iš 5.
+let filteredNumbers9 = array.filter(function(number) {
+    return number <= 155 && number % 5 === 0;
+});
+
+console.log("skaičius, kurie yra mažesni arba lygūs 155 ir kurie dalinasi iš 5:", filteredNumbers9);
 // 3.47. Gauti tik skaičius, kurie yra mažesni arba lygūs -333 ir kurie dalinasi iš 9.
+let filteredNumbers10 = array.filter(function(number) {
+    return number <= -333 && number % 9 === 0;
+});
+
+console.log("skaičius, kurie yra mažesni arba lygūs -333 ir kurie dalinasi iš 9:", filteredNumbers10);
 // 3.48. Gauti tik skaičius, kurie yra didesni už 100, mažesni už 500 ir kurie dalinasi iš 5.
+let filteredNumbers11 = array.filter(function(number) {
+    return number > 100 && number < 500 && number % 5 === 0;
+});
+
+console.log("skaičius, kurie yra didesni už 100, mažesni už 500 ir kurie dalinasi iš 5:", filteredNumbers11);
 // 3.49. Gauti tik skaičius, kurie yra didesni arba lygūs 888, mažesni už 1000 ir kurie dalinasi iš 2.
+let filteredNumbers12 = array.filter(function(number) {
+    return number >= 88 && number < 1000 && number % 2 === 0;
+});
+
+console.log("skaičius, kurie yra didesni arba lygūs 888, mažesni už 1000 ir kurie dalinasi iš 2:", filteredNumbers12);
 // 3.50. Gauti tik skaičius, kurie yra mažesni arba lygūs 888, didesni arba lygūs -333, dalinasi iš 3 ir nėra nulis.
+let filteredNumbers13 = array.filter(function(number) {
+    return number <= 888 && number >= 333 && number % 3 === 0 && number !== 0;
+});
+
+console.log("skaičius, kurie yra mažesni arba lygūs 888, didesni arba lygūs -333, dalinasi iš 3 ir nėra nulis:", filteredNumbers13);
 // 3.51. Gauti tik skaičius.
 // 3.52. Gauti tik tekstus (string).
 // 3.53. Gauti tik tekstus (string), kurie turi daugiau nei 5 simbolius.
